@@ -17,7 +17,7 @@ const Home = () => {
     if (e.key === "Enter") {
       e.preventDefault();
       try {
-        const response = await fetch(api);
+        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=da4dae2ec24541dc915121531240705&q=${location}&days=7&aqi=yes&alerts=yes`);
         if (!response.ok) {
           throw new Error();
         }
