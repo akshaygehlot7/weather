@@ -5,7 +5,7 @@ import Input from "./components/Input";
 import Current from "./components/Current";
 import WeekForecast from "./components/WeekForecast";
 import WeatherDetails from "./components/WeatherDetails";
-import '../.env'
+//import '../.env'
 
 const apiUrl = process.env.REACT_WEATHER_URL;
 
