@@ -19,7 +19,7 @@ const Home = () => {
   const handleSearch = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=da4dae2ec24541dc915121531240705&q=${location}&days=7&aqi=yes&alerts=yes`
+      const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=da4dae2ec24541dc915121531240705&q=${location}&days=7&aqi=yes&alerts=yes`
       try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
