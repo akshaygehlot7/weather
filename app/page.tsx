@@ -7,20 +7,20 @@ import WeekForecast from "./components/WeekForecast";
 import WeatherDetails from "./components/WeatherDetails";
 //import '../.env'
 
-const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=da4dae2ec24541dc915121531240705&q=${location}&days=7&aqi=yes&alerts=yes`
+//const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=da4dae2ec24541dc915121531240705&q=${location}&days=7&aqi=yes&alerts=yes`
 
 const Home = () => {
   const [data, setData] = useState({});
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
 
-  // const url = `http://api.weatherapi.com/v1/forecast.json?key=da4dae2ec24541dc915121531240705&q=${location}&days=7&aqi=yes&alerts=yes`
+  const url = `http://api.weatherapi.com/v1/forecast.json?key=da4dae2ec24541dc915121531240705&q=${location}&days=7&aqi=yes&alerts=yes`
 
   const handleSearch = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       e.preventDefault();
       try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error();
         }
